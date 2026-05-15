@@ -1,0 +1,14 @@
+{
+  "name": "node-crud-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}

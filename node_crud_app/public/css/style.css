@@ -1,0 +1,36 @@
+body
+{
+    font-family: Arial;
+    padding: 20px;
+}
+
+table
+{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td
+{
+    padding: 10px;
+}
+
+button
+{
+    margin: 5px;
+}
+
+#formContainer
+{
+    position: fixed;
+
+    top: 20%;
+
+    left: 40%;
+
+    background: white;
+
+    border: 1px solid black;
+
+    padding: 20px;
+}
