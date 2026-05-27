@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Location Demo</title>
-</head>
 <body>
 
-<h2>Get Device Location</h2>
-
 <button onclick="getLocation()">
-    Get Location
+Get Approx Location
 </button>
 
-<p id="output"></p>
+<p id="out"></p>
 
 <script>
 
-function getLocation()
+async function getLocation()
 {
-    navigator.geolocation.getCurrentPosition(
-        success,
-        error
-    );
-}
+    let response =
+        await fetch("https://ipapi.co/json/");
 
-function success(position)
-{
-    document.getElementById("output").innerHTML =
-        "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-}
+    let data = await response.json();
 
-function error(err)
-{
-    document.getElementById("output").innerHTML =
-        err.message;
+    document.getElementById("out").innerHTML =
+        "City: " + data.city +
+        "<br>Region: " + data.region +
+        "<br>Country: " + data.country_name +
+        "<br>Latitude: " + data.latitude +
+        "<br>Longitude: " + data.longitude;
 }
 
 </script>
